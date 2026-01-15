@@ -20,21 +20,44 @@
 // console.log(secondBurger.ingredients[0]); // Salad
 
 
-const hamburger = { 
-	name: "Cheese Burger", 
-	weight: 250,
-	maker: {
-		name: "Anonymous Chef",
-		restaurant: {
-			name: "Hyur's Burgers",
-			address: "Main Street, 123",
-			isOpen: true,
-		},
-		age: 29
-	}
-};
+// const hamburger = { 
+// 	name: "Cheese Burger", 
+// 	weight: 250,
+// 	maker: {
+// 		name: "Anonymous Chef",
+// 		restaurant: {
+// 			name: "Hyur's Burgers",
+// 			address: "Main Street, 123",
+// 			isOpen: true,
+// 		},
+// 		age: 29
+// 	}
+// };
 
-const secondBurger = structuredClone(hamburger);
-const thirdBurger = structuredClone(hamburger);
+// const secondBurger = structuredClone(hamburger);
+// const thirdBurger = structuredClone(hamburger);
 
 //9 oggetti in memoria
+
+
+const chef = {
+	name: "Chef Hyur",
+	age: 29,
+	makeBurger: (num = 1) => {
+		console.log(`Ecco ${num} hamburger per te!`);
+	},
+}
+
+//Per chef uso lo spread perchè l'oggetto chef al suo interno prresenta un metodo.
+
+const restaurant = {
+	name: "Hyur's Burgers",
+	address: {
+		street: 'Main Street',
+		number: 123,
+	},
+	openingDate: new Date(2025, 3, 11),
+	isOpen: false,
+};
+
+//restaurant uso structuredClone() così riesco a creare anche un clone delle date.
